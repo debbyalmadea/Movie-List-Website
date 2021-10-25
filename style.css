@@ -1,0 +1,289 @@
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --primary-color: #000;
+  --secondary-color: #0c0b13;
+  --third-color: #8a00ff;
+}
+
+body {
+  background-color: var(--primary-color);
+  margin: 0;
+}
+
+header {
+  padding: 1em;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-end;
+}
+.search {
+  min-width: 200px;
+  background-color: whitesmoke;
+  padding: 0.5em 1em;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  color: var(--secondary-color);
+}
+
+.search:focus {
+  outline: 0;
+  border: 2px solid var(--third-color);
+  border-radius: 10px;
+}
+
+.page-title {
+  color: var(--third-color);
+  display: flex;
+  justify-content: center;
+  font-size: 220px;
+  padding: 0;
+  margin: 0;
+}
+.page-desc {
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  font-weight: normal;
+  font-size: 20px;
+  margin-top: -1em;
+  margin-bottom: 3em;
+  opacity: 80%;
+}
+main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 200px;
+  margin: 1em;
+  background-color: var(--secondary-color);
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.movie img {
+  height: 426.91;
+  width: 200px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 0.5em 1em;
+  color: whitesmoke;
+  letter-spacing: 0.5px;
+  max-width: 200px;
+  font-size: 12px;
+}
+
+.movie-info h2 {
+  font-weight: normal;
+}
+.movie-info h3 {
+  font-size: 15px;
+  color: var(--third-color);
+}
+
+.movie:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  padding-bottom: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 80%;
+  overflow-y: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: var(--secondary-color);
+  margin: auto;
+  border: 1px solid transparent;
+  width: 80%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.5s;
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  object-position: 0 30%;
+}
+.modal-movie-info {
+  padding: 1em 2em;
+}
+.movie-title {
+  margin: 0;
+  color: var(--third-color);
+  letter-spacing: 1px;
+  font-size: 50px;
+}
+.modal-movie-detail {
+  display: flex;
+  margin: 0.5em 0;
+  font-size: 20px;
+  color: whitesmoke;
+  opacity: 80%;
+}
+.release-date {
+  font-weight: lighter;
+}
+.movie-popularity {
+  font-weight: lighter;
+  padding: 0 0.25em;
+}
+
+.movie-desc {
+  margin-top: -1em;
+  color: whitesmoke;
+  padding: 1em 2em;
+  line-height: 1.5;
+}
+/* The Close Button */
+.close {
+  padding: 0.25em 0.5em;
+  color: var(--primary-color);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: whitesmoke;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-button {
+  display: flex;
+  justify-content: space-between;
+  margin: 1em 5em;
+}
+
+.next {
+  display: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: whitesmoke;
+  border-radius: 18px;
+  font-size: 20px;
+  padding: 0.25em 0.75em;
+}
+
+.next:hover {
+  background-color: var(--third-color);
+  color: #000;
+  cursor: pointer;
+}
+
+.prev {
+  display: none;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: whitesmoke;
+  border-radius: 18px;
+  font-size: 20px;
+  padding: 0.25em 0.75em;
+}
+
+.prev:hover {
+  background-color: var(--third-color);
+  color: #000;
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2em 5em;
+  margin-top: 10em;
+}
+
+.TMDB {
+  width: 150px;
+}
+
+.notice {
+  color: whitesmoke;
+  font-weight: lighter;
+  width: 150px;
+  font-size: 15px;
+  margin-bottom: 0;
+  opacity: 60%;
+}
+
+.author {
+  color: whitesmoke;
+}
+
+.github {
+  width: 80px;
+  margin: 0;
+}
