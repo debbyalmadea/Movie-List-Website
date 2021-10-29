@@ -22,7 +22,7 @@ function getMovies(url) {
           total_pages = data.total_pages
 
           if (current_page <= 1) {
-            prevButton.style.display = "none"
+            prevButton.style.display = "none";
             nextButton.style.display = "block";
             nextButton.onclick = function() {pageCall(url, next_page)}
           }
@@ -34,6 +34,11 @@ function getMovies(url) {
             prevButton.onclick = function() {pageCall(url, prev_page)}
           }
         } 
+        else {
+          main.innerHTML =`<h4>Pencarian tidak ditemukan</h4>`;
+          prevButton.style.display = "none";
+          nextButton.style.display = "none";
+        }
 
     })
 }

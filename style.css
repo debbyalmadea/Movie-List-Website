@@ -57,6 +57,8 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  color: whitesmoke;
+  opacity: 60%;
 }
 
 .movie {
