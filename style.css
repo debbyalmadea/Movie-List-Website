@@ -53,6 +53,7 @@ header {
   margin-bottom: 3em;
   opacity: 80%;
 }
+
 main {
   display: flex;
   justify-content: center;
@@ -97,18 +98,18 @@ main {
 
 .modal {
   display: none;
-  position: fixed; 
-  z-index: 1; 
-  padding-top: 100px; 
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
   padding-bottom: 100px;
   left: 0;
   top: 0;
   width: 100%;
   height: 80%;
   overflow-y: auto;
-  background-color: rgb(0, 0, 0); 
-  background-color: rgba(0, 0, 0, 0.4); 
-  -webkit-animation-name: fadeIn; 
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-animation-name: fadeIn;
   -webkit-animation-duration: 0.4s;
   animation-name: fadeIn;
   animation-duration: 0.4s;
@@ -127,7 +128,7 @@ main {
 
 .modal-content img {
   width: 100%;
-  height: 450px;
+  height: 250px;
   object-fit: cover;
   object-position: 0 30%;
 }
@@ -142,7 +143,7 @@ main {
 }
 .modal-movie-detail {
   display: flex;
-  margin: 0.5em 0;
+  margin: 0;
   font-size: 20px;
   color: whitesmoke;
   opacity: 80%;
@@ -156,12 +157,12 @@ main {
 }
 
 .movie-desc {
-  margin-top: -1em;
+  margin-top: -2em;
   color: whitesmoke;
   padding: 1em 2em;
   line-height: 1.5;
 }
-
+/* The Close Button */
 .close {
   padding: 0.25em 0.5em;
   color: var(--primary-color);
@@ -177,6 +178,7 @@ main {
   cursor: pointer;
 }
 
+/* Add Animation */
 @-webkit-keyframes slideIn {
   from {
     bottom: -300px;
