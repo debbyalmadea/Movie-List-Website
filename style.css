@@ -287,3 +287,22 @@ footer {
   width: 80px;
   margin: 0;
 }
+
+@media only screen and (max-width: 480px) {
+  .page-title {
+    font-size: 10em
+  }
+
+  .page-desc {
+    padding: 0 2em;
+    text-align: center;
+  }
+
+  .movie {
+    width: 80%;
+  }
+
+  .movie img {
+    width: 100%;
+  }
+}
